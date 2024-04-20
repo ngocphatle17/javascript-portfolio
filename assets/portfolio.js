@@ -42,15 +42,3 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbymX5w_Hz6BtG-tptzF-y
         .catch(error => console.error('Error!', error.message))
   })
 
-  function trackGitHubClick(event) {
-    // Prevent the default behavior of the anchor tag
-    event.preventDefault();
-    
-    // Track the click event if needed
-    // Add any tracking code here
-    
-    // Open the specified URL in the current tab
-    var url = "https://github.com/ngocphatle17/personal-projects/tree/main/WeatherApp-main";
-    window.location.href = url;
-}
-

@@ -20,7 +20,10 @@ body{
     background-size: cover;
     background-position: center;
 }
-
+.header-text p{
+    color: #ff8c42;
+    font-style: italic;
+}
 .container{
     padding: 10px 10%;
 }
@@ -152,7 +155,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #FF8C42;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: -8px;
