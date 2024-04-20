@@ -140,6 +140,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    color: #ff8c42;
     transition: transform 0.5s;
 }
 
@@ -192,6 +193,7 @@ nav ul li a:hover::after{
     max-height: 1000px; /* Set a maximum height to allow animation */
 }
 
+
 /* -- ----------------services------------------- */
 .services{
     padding: 30px;
@@ -206,7 +208,7 @@ nav ul li a:hover::after{
 }
 
 .service-list div{
-    background: #262626;
+    background: #313F42;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;

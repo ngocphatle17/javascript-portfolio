@@ -1,16 +1,27 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
 
+// Declare a variable to keep track of the currently active tab
+let activeTabName = null;
+
 function opentab(tabname, event) {
-    for (tablink of tablinks) {
-        tablink.classList.remove("active-link");
+    if (activeTabName === tabname) {
+        event.currentTarget.classList.remove("active-link");
+        document.getElementById(tabname).classList.remove("active-tab");
+        activeTabName = null;
+    } else {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+        activeTabName = tabname;
     }
-    for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-    }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
 }
+
 
 var sidemenu = document.getElementById("sidemenu");
 
@@ -42,3 +53,4 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbymX5w_Hz6BtG-tptzF-y
     var url = "https://github.com/ngocphatle17/personal-projects/tree/main/WeatherApp-main";
     window.location.href = url;
 }
+
